@@ -1,0 +1,16 @@
+<h1 [ngClass]="{
+  'gray': h1Style,
+  'large': !h1Style
+
+}">Home</h1>
+
+<h3>{{errorMsg}}</h3>
+<ol *ngFor="let user of users ">
+  
+    <li class="badge" (click)="onSelect(user)">{{user.id}}</li> 
+  <li >{{user.title}}</li>
+
+  <li>{{user.body}}</li>
+</ol>
+
+<button (click)="click($event)">Click Me</button>
